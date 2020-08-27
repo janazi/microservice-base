@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>2b1d974e-3411-4122-934c-187b6135c83a</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.2" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+    <PackageReference Include="Polly.Caching.Distributed" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jnz-correlation-token-middleware\Jnz.CorrelationTokenMiddleware.csproj" />
+    <ProjectReference Include="..\jnz-jaeger-extension\Jnz.JaegerExtensions.csproj" />
+  </ItemGroup>
+
+
+</Project>
